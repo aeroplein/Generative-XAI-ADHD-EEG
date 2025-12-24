@@ -80,6 +80,22 @@ python generative_xai.py
 
 ```
 
+## Datasets
+
+This study uses a Transfer Learning approach involving two distinct EEG datasets to bridge the gap between adult and pediatric domains.
+
+### 1. Source Domain (Pre-training)
+* **Dataset:** [EEG Motor Movement/Imagery Database](https://physionet.org/content/eegmmidb/1.0.0/)
+* **Source:** PhysioNet
+* **Description:** A large-scale dataset containing EEG recordings from **healthy adult subjects**. We utilize this data to pre-train the Diffusion Transformer, allowing the model to learn the fundamental "grammar" and high-level temporal dynamics of human EEG signals before exposure to the specific anomalies of ADHD.
+
+### 2. Target Domain (Fine-tuning)
+* **Dataset:** [EEG Data for ADHD / Control Children](https://ieee-dataport.org/open-access/eeg-data-adhd-control-children)
+* **Source:** IEEE DataPort
+* **Description:** A specialized dataset containing EEG recordings from **children diagnosed with ADHD** and a control group. This data is used for:
+    * Quantifying the "Stationarity Gap" against the adult baseline.
+    * Fine-tuning the pre-trained model to adapt to the spectral rigidity and Theta-band power anomalies characteristic of pediatric ADHD.
+
 ##  Results
 
 * **Stationarity Gap:** Confirmed a significant domain shift: Adults (51.70% stationary) vs. Pediatric ADHD (62.70% stationary).
