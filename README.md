@@ -126,6 +126,4 @@ If you use this code in your research, please cite:
 
 *This project is built using PyTorch and MNE-Python.*
 
-```
-
-```
+**Medical Disclaimer:** This project involves the use of Explainable AI (XAI) and Deep Learning models (Transformer/Diffusion) for the analysis of ADHD EEG data. The software and findings provided herein are for academic research and educational purposes only. They are not intended for use in clinical diagnosis, treatment, or decision-making. The authors assume no responsibility for the use of this software in clinical settings.
